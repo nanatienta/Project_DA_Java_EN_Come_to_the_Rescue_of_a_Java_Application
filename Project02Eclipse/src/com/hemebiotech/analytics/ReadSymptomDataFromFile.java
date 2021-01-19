@@ -1,4 +1,11 @@
 package com.hemebiotech.analytics;
+/**
+ * This package read a list of symptom from a file
+ * then sort the symptoms alphabetically
+ * then increment the symptoms for each occurence
+ * @author Nana
+ * @version 1.1
+ */
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,12 +14,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ *  read symptom data from a source
+ * The important part is, the return value from the operation, which is a list of strings,
+ * that may contain many duplications
+ *
+ * The implementation does not need to order the list
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+	private final String filepath;
 	
 	/**
 	 * 
