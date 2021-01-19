@@ -9,15 +9,12 @@ public class SortAndIncrementSymptoms {
     private ReadSymptomDataFromFile readSymptomDataFromFile;
     /**
      * get the list of symptoms from the symptoms.txt file
+     * sorts symptoms alphabetically and adds plus 1 to each symptom recurrence
      **/
     public SortAndIncrementSymptoms() {
         readSymptomDataFromFile = new ReadSymptomDataFromFile("Project02Eclipse\\symptoms.txt");
 
     }
-    /**
-     * sorts symptoms alphabetically and adds plus 1 to each symptom recurrence
-     *
-     **/
     public TreeMap<String, Integer> countSymptoms() {
 
         TreeMap<String, Integer> map = new TreeMap<>();
